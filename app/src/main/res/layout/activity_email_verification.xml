@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".sign_up.EmailVerificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/userLL"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <EditText
+            android:id="@+id/usernameEmVfEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            />
+
+        <EditText
+            android:id="@+id/userpswdEmVfEdt"
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/entr_password"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ecom_logo" />
+
+    <TextView
+        android:id="@+id/verifiedTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="280dp"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:drawableTop="@drawable/ic__verified"
+        tools:text="Verify Your email" />
+
+    <LinearLayout
+        android:id="@+id/btnLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@color/quantum_white_100"
+        android:layout_marginBottom="68dp"
+        app:cornerRadius="50dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <Button
+            android:id="@+id/sendLinkBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:foregroundTint="#FF5722"
+            android:outlineProvider="bounds"
+            android:text="@string/sent_link"
+            app:cornerRadius="10dp"
+            app:rippleColor="@color/logo_color"
+            app:strokeColor="@color/logo_color"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/reSendLinkBtn"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            app:cornerRadius="10dp"
+            android:enabled="false"
+            app:rippleColor="@color/logo_color"
+            android:text="@string/resend_link"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setLocationNextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawableEnd="@drawable/ic_start"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:text="@string/set_delievry_locaton"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="68dp"
+        android:elevation="10dp"
+        app:cornerRadius="10dp"
+        android:visibility="gone"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll2"
+    tools:context=".edit_profile.EditProfileActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/backgrd_sqr_for_usr"
+        android:fontFamily="@font/android"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/edit_profile"
+        android:textAllCaps="true"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/edtPrfChangeAddrssBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:drawableLeft="@drawable/ic_my_location"
+        android:padding="2dp"
+        android:text="@string/change_address"
+        android:textAlignment="textStart"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/name"
+        app:startIconDrawable="@drawable/ic_person"
+        android:padding="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNameEdttxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/logo_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/phone_no"
+        app:startIconDrawable="@drawable/ic_phone"
+        android:padding="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPhoneEdttxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/logo_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/name"
+        android:padding="2dp"
+        app:helperText="@string/email">
+
+
+        <TextView
+            android:id="@+id/edtProfileMailTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_mark_email"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            tools:text="panjasaibal1999@gmail.com" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/chngPasswdEdtBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="@color/logo_color"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        app:icon="@drawable/ic_key"
+        app:iconGravity="textStart"
+        android:gravity="center"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+
+        android:text="@string/change_password" />
+
+    <Button
+        android:id="@+id/saveEdtProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="@color/logo_color"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+        android:padding="2dp"
+        android:text="@string/save_and_continue" />
+
+
+</LinearLayout>

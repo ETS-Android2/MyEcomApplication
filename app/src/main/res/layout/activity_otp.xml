@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cool_stuff"
+    android:orientation="vertical"
+    tools:context=".verfication.OtpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="Enter Your Phone Number"
+        android:id="@+id/phNumberTv"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        tools:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/verifyOtpTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VERIFY OTP"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/logo_color"
+        android:fontFamily="@font/highland_gothic_flf_bold"
+        android:text="@string/send_otp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/material_on_primary_emphasis_high_type"
+        android:textSize="24sp"
+        android:id="@+id/sendOtpTv"
+        android:visibility="gone"
+
+       />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/otp_sent_to_phone"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:id="@+id/sentOtpMsgTv"
+        android:textColor="@color/places_text_black_alpha_87"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_marginTop="162dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        android:padding="5dp"
+        android:id="@+id/phoneNumberLL"
+        android:visibility="visible"
+        tools:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_india"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:text="+91"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/phoneNoEdtPhone"
+            android:padding="4dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="@string/phone_no"
+            />
+
+    </LinearLayout>
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="235dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="#65EAEAEA"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="55dp"
+        app:itemRadius="8dp"
+        app:itemWidth="55dp"
+        app:lineColor="@color/logo_color"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:lineWidth="2dp" />
+
+    <Button
+        android:id="@+id/sendOtpBtn"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_otp"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:visibility="visible"
+        tools:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/otpVerifyBtn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:shadowRadius="@integer/material_motion_duration_medium_1"
+        android:text="@string/verify"
+        app:elevation="20dp"
+        android:visibility="gone"
+
+        tools:visibility="visible"
+        />
+
+    <Button
+        android:id="@+id/reSendOtpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        tools:text="@string/resend_otp"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:fadingEdgeLength="2dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textSize="15sp"
+        />
+
+
+</LinearLayout>

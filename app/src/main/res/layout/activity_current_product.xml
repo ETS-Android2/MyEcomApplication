@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".current_prd.CurrentProductActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/currntPrdPinAddrTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7.5"
+                android:layout_marginLeft="5dp"
+                android:gravity="center|start"
+                android:textSize="11sp"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:text="Deliver to: 743318"
+                android:drawableStart="@drawable/ic_location"
+                />
+            <ImageView
+                android:id="@+id/currntPrdImgIv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:src="@drawable/asus_rog"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:outlineAmbientShadowColor="@color/logo_color"
+                android:elevation="10dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/highlandgothic_lightflf"
+                    android:text="@string/product_name"
+                    />
+                <TextView
+                    android:id="@+id/currntPrdNameTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center|start"
+                    android:text="Asus Rog Zephrus "
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="@string/product_price"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/highlandgothic_lightflf"
+                    />
+                <TextView
+                    android:id="@+id/currntPrdPriceTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center|start"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    android:text="82000.00"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/addToCartBtn"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/logo_color"
+                android:text="@string/add_to_cart"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/highlandgothic_lightflf"
+                android:text="@string/product_description"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:id="@+id/currntproductDesTv"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit varius enim, at consectetur erat varius eu. Sed consectetur elit ut varius laoreet. Ut eu sem elit. Etiam molestie aliquam nisl ac volutpat. Fusce ultricies commodo erat, a tincidunt massa pellentesque ut. Nullam fringilla nec arcu convallis hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sem, pellentesque nec odio vitae, mattis vehicula dolor. Nullam in nulla ac ipsum vehicula tincidunt. Sed aliquet augue magna, eu gravida sapien euismod eget. Sed sollicitudin turpis quis neque dignissim, eget scelerisque mi euismod. Donec erat quam, facilisis vel purus id, bibendum sollicitudin erat. Quisque faucibus, augue nec fringilla malesuada, neque est lacinia tortor, non cursus erat metus nec ex. ."
+                />
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

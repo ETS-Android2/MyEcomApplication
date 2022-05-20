@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".orders.OrdersActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="You Don't Have any Orders Yet"
+        android:textColor="@color/danger"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:padding="10dp"
+        android:fontFamily="@font/android_scratch"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

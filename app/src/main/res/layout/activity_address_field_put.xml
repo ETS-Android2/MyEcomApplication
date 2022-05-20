@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".address.AddressFieldPutActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:fontFamily="@font/android"
+                android:text="Address"
+                android:textAllCaps="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/backgrd_sqr_for_usr"
+                />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:textAllCaps="false"
+                android:text="@string/get_current_location"
+                android:id="@+id/getCurrentLocationBtn"
+                android:fontFamily="@font/highland_gothic_flf_bold"
+                android:drawableLeft="@drawable/ic_my_location"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addrFldNameTv"
+                tools:text="Saibal Panja"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                android:hint="Home Address"
+                app:startIconDrawable="@drawable/ic_round_home_24"
+                app:helperText="@string/enter_area"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/areaEdtTxt"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                android:hint="City/Village"
+                app:helperText="@string/enter_city"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cityEdtTxt"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                android:hint="ZipCode"
+                app:helperText="@string/enter_pin"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pinEdtTxt"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                app:helperText="@string/district"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="South 24 Paraganas"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:fontFamily="@font/highland_gothic_flf_bold"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                app:helperText="@string/state"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="West Bengal"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/highland_gothic_flf_bold"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:elevation="10dp"
+                android:hint="LandMark"
+                app:startIconDrawable="@drawable/ic_location"
+                app:helperText="@string/enter_landmark"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/landmarkEdtTxt"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveAddressAdrFieldBtn"
+                android:text="@string/save_and_continue"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

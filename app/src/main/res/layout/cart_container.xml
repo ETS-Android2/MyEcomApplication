@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:contentPadding="1dp"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:outlineAmbientShadowColor="@color/teal_200"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:id="@+id/productImageCartRvTv"
+                android:padding="1dp"
+                android:requiresFadingEdge="vertical|horizontal"
+                tools:src="@drawable/asus_rog"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/productNameCartRvTv"
+                    android:layout_marginLeft="2dp"
+                    tools:text="Asus Rog Zephrus Series"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/highlandgothic_lightflf"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/productPriceCartRvTv"
+                    tools:text="Price: 100075.00"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="2"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="28dp"
+                    android:layout_height="34dp"
+                    app:icon="@drawable/ic_round_add_24"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/incrementItemNoBtn"
+                    />
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="20dp"
+                    android:text="1"
+                    android:fontFamily="@font/highland_gothic_flf_bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:id="@+id/itemQntTv"
+                    android:textSize="9sp"
+
+                    />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    app:icon="@drawable/ic_round_horizontal_rule"
+                    android:layout_marginEnd="3dp"
+                    android:padding="4dp"
+                    android:id="@+id/decrementItemNoBtn"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1.1"
+
+                android:layout_marginEnd="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:text="@string/remove"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/removeItemTvCartRvBtn"
+                    android:textSize="8sp"
+                    android:backgroundTint="@color/danger"
+
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

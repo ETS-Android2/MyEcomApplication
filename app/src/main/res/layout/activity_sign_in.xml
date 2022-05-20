@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cool_stuff"
+    tools:context=".sign_in.SignInActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:id="@+id/logoIvSignIn"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ecom_logo"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:padding="2dp"
+        android:id="@+id/txtInpEdt1"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        app:boxStrokeColor="@color/logo_color"
+        android:hint="@string/username"
+        app:startIconDrawable="@drawable/ic_outline_mail_24"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailSignInEdttxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/logo_color"
+
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="2dp"
+        android:id="@+id/txtInpEdt2"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/entr_password"
+        app:startIconDrawable="@drawable/ic_key"
+        app:endIconMode="password_toggle"
+        app:boxStrokeColor="@color/logo_color"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pswdSignInEdttxt"
+            android:shadowColor="@color/logo_color"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/forgetPswdBtgn"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/logo_color"
+        android:layout_gravity="center"
+        />
+
+    <Button
+
+        android:id="@+id/signInBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/logo_color"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+
+        style="@style/Widget.App.Button"
+        />
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backTosignUpBtn"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/new_user"
+        android:textColor="@color/logo_color"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:shadowColor="@color/logo_color"
+        android:outlineSpotShadowColor="@color/logo_color"
+        android:drawableStart="@drawable/ic_sign_in"
+
+        />
+
+
+
+</LinearLayout>

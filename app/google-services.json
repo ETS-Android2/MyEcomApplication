@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "93585580873",
+    "project_id": "myecom-application-abc42",
+    "storage_bucket": "myecom-application-abc42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93585580873:android:af6cae8e433121b30b3098",
+        "android_client_info": {
+          "package_name": "com.tuhin.android.myecomapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93585580873-ln13pql6drtd7oflact6g1us0asa3n75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPACYX6Os9J3eI4O38poOZDrggQqHA8lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93585580873-ln13pql6drtd7oflact6g1us0asa3n75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

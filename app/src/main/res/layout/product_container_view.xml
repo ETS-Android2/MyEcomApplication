@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/productGradLL"
+        >
+        <ImageView
+            android:id="@+id/prdGradImageIv"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/asus_rog"
+            />
+
+        <TextView
+            android:id="@+id/gradProductNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/highland_gothic_flf_bold"
+            android:textAlignment="center"
+            android:padding="1dp"
+            android:textSize="15sp"
+            tools:text="Laptop" />
+
+        <TextView
+            android:id="@+id/gradProductPriceTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/highlandgothicflf"
+            android:gravity="center"
+            android:layout_marginBottom="2dp"
+            android:textSize="10sp"
+            tools:text="626.00" />
+        <Button
+            android:id="@+id/addCartPrdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="@string/add_to_cart"
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

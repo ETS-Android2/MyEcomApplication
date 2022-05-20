@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MapsActivity">
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     />
+
+    <Button
+        android:id="@+id/saveMapAddrBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tprManuallyAddrBtn"
+        android:layout_marginBottom="25dp"
+
+        android:backgroundTint="@android:color/transparent"
+        android:onClick="saveMapAddr"
+        android:text="@string/save"
+        android:textColor="@color/logo_color"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/tprManuallyAddrBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/type_manually"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:onClick="saveMapAddr"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/danger"
+        />
+</RelativeLayout>
