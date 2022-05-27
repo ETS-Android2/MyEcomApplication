@@ -67,6 +67,7 @@
         android:visibility="gone"
         android:id="@+id/sentOtpMsgTv"
         android:textColor="@color/places_text_black_alpha_87"
+        tools:visibility="visible"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -116,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="145dp"
         android:cursorVisible="true"
         android:inputType="number"
         android:itemBackground="#65EAEAEA"
@@ -155,7 +156,6 @@
         android:text="@string/verify"
         app:elevation="20dp"
         android:visibility="gone"
-
         tools:visibility="visible"
         />
 
@@ -169,10 +169,9 @@
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:fadingEdgeLength="2dp"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:visibility="visible"
         android:textSize="15sp"
         />
-
 
 </LinearLayout>

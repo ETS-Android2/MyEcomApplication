@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.tuhin.android.myecomapplication.MapsActivity;
 import com.tuhin.android.myecomapplication.R;
 import com.tuhin.android.myecomapplication.sign_up.SignUpActivity;
 
@@ -23,11 +28,14 @@ import java.util.concurrent.TimeUnit;
 
 public class OtpActivity extends AppCompatActivity {
 
+
+    public static final String PHONE_NUMBER_INTENT_KEY="phoneNumber";
     private Button verifyBtn,sendOtpBtn,resendOtpBtn;
-    private TextView phoneNoTv,phNumberTv,sendOtpTv,verifyOtpTv;
+    private TextView phoneNoTv,phNumberTv,sendOtpTv,verifyOtpTv,sentOtpMsgTv;
     private EditText phoneNumberEdt;
     private LinearLayout phoneNumberLL;
     private com.chaos.view.PinView pinView;
+    private String phoneNo;
 
     private FirebaseAuth auth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
@@ -45,10 +53,10 @@ public class OtpActivity extends AppCompatActivity {
         resendOtpBtn = findViewById(R.id.reSendOtpBtn);
         phNumberTv = findViewById(R.id.phNumberTv);
         sendOtpTv = findViewById(R.id.sentOtpMsgTv);
+        sentOtpMsgTv = findViewById(R.id.sentOtpMsgTv);
         verifyOtpTv = findViewById(R.id.verifyOtpTv);
         phoneNumberLL = findViewById(R.id.phoneNumberLL);
         phoneNumberEdt = findViewById(R.id.phoneNoEdtPhone);
-
 
         pinView = findViewById(R.id.pin_view);
 
@@ -56,6 +64,8 @@ public class OtpActivity extends AppCompatActivity {
 
         phNumberTv.setVisibility(View.VISIBLE);
         phoneNumberLL.setVisibility(View.VISIBLE);
+        resendOtpBtn.setVisibility(View.GONE);
+        sentOtpMsgTv.setVisibility(View.GONE);
 
 
         callbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -63,6 +73,9 @@ public class OtpActivity extends AppCompatActivity {
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
 
                 String code = phoneAuthCredential.getSmsCode();
+                Log.d("OTP",code);
+                Toast.makeText(OtpActivity.this, code, Toast.LENGTH_SHORT).show();
+
                 if(pinView.getText().toString().equals(code)){
                     verifyCode(code);
                 }else{
@@ -75,6 +88,12 @@ public class OtpActivity extends AppCompatActivity {
 
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
+                if(e instanceof FirebaseAuthInvalidCredentialsException){
+                    Toast.makeText(OtpActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                }
+                else if(e instanceof FirebaseTooManyRequestsException){
+                    Toast.makeText(OtpActivity.this, "Sms quota has been exceed try again later", Toast.LENGTH_SHORT).show();
+                }
 
             }
 
@@ -82,6 +101,10 @@ public class OtpActivity extends AppCompatActivity {
             public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
                 verificationCode=s;
+                Log.d("VerifcationTokken",s);
+                Toast.makeText(OtpActivity.this, s, Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(OtpActivity.this, "OtpReceived", Toast.LENGTH_SHORT).show();
             }
         };
 
@@ -127,15 +150,22 @@ public class OtpActivity extends AppCompatActivity {
 
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(auth)
                 .setPhoneNumber(number)
-                .setTimeout(2L, TimeUnit.SECONDS)
+                .setTimeout(60L, TimeUnit.SECONDS)
                 .setActivity(this)
                 .setCallbacks(callbacks)
                 .build();
 
+
+
         PhoneAuthProvider.verifyPhoneNumber(options);
+
     }
     private void verifyCode(String code){
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationCode,code);
-        startActivity(new Intent(OtpActivity.this, SignUpActivity.class));
+        Intent intent = new Intent(OtpActivity.this,SignUpActivity.class);
+        intent.putExtra(PHONE_NUMBER_INTENT_KEY,phoneNumberEdt.getText().toString());
+
+        startActivity(intent);
+        finish();
     }
 }

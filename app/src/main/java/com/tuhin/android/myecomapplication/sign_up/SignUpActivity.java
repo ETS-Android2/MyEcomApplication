@@ -20,9 +20,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tuhin.android.myecomapplication.MapsActivity;
 import com.tuhin.android.myecomapplication.R;
 import com.tuhin.android.myecomapplication.common.Constants;
 import com.tuhin.android.myecomapplication.common.NodeNames;
+import com.tuhin.android.myecomapplication.verfication.OtpActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,7 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
 
-    private TextInputEditText userEmailEdt,paswdEdtTex,userNAmeEdt,confPswdEdt;
+    private TextInputEditText userEmailEdt,paswdEdtTex,userNAmeEdt,confPswdEdt,phoneSignUpEdtTxt;
     private Button signUpBtn,exitBtn;
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
@@ -47,11 +49,16 @@ public class SignUpActivity extends AppCompatActivity {
         userNAmeEdt = findViewById(R.id.nameSignUpEdttxt);
         paswdEdtTex = findViewById(R.id.pswdSignUpEdttxt);
         confPswdEdt= findViewById(R.id.confPswdSignUpEdttxt);
+        phoneSignUpEdtTxt = findViewById(R.id.phoneSignUpEdttxt);
 
         signUpBtn= findViewById(R.id.signUpBtn);
         exitBtn = findViewById(R.id.exitBtn);
         rootRef = FirebaseDatabase.getInstance(Constants.FIREBASE_REALTIME_DATABASE_URL).getReference().child(NodeNames.USERS);
         rootRef.keepSynced(true);
+
+        if(getIntent()!=null){
+            phoneSignUpEdtTxt.setText(getIntent().getStringExtra(OtpActivity.PHONE_NUMBER_INTENT_KEY));
+        }
 
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,14 +98,14 @@ public class SignUpActivity extends AppCompatActivity {
                                             signUpDataMap.put(NodeNames.NAME,userNAmeEdt.getText().toString());
                                             signUpDataMap.put(NodeNames.EMAIL,userEmailEdt.getText().toString());
                                             signUpDataMap.put(NodeNames.PINCODE,"");
-                                            signUpDataMap.put(NodeNames.PHONE,"");
+                                            signUpDataMap.put(NodeNames.PHONE,phoneSignUpEdtTxt.getText().toString());
                                             signUpDataMap.put(NodeNames.ADDRESS,"");
                                             signUpDataMap.put(NodeNames.PHOTO,"");
                                             rootRef.child(userId).setValue(signUpDataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if(task.isSuccessful()){
-                                                        Intent intent = new Intent(SignUpActivity.this, EmailVerificationActivity.class);
+                                                        Intent intent = new Intent(SignUpActivity.this, MapsActivity.class);
                                                         startActivity(intent);
                                                         finish();
                                                         Toast.makeText(getApplicationContext(), getString(R.string.sign_cmplt), Toast.LENGTH_SHORT).show();
